@@ -1,8 +1,8 @@
 import { Component } from 'react';
-// import "./styles.css";
-import Searchbar from 'components/Searchbar/Searchbar';
-import ImageGallery from 'components/ImageGallery/ImageGallery';
-import Loader from 'components/Loader/Loader';
+import '../styles.css';
+import Searchbar from './Searchbar/Searchbar';
+import ImageGallery from './ImageGallery/ImageGallery';
+import Loader from './Loader/Loader';
 import Modal from './Modal/Modal';
 
 
@@ -29,7 +29,7 @@ export class App extends Component {
       prevState.gallery.length < this.state.gallery.length) {
       window.scrollBy({
         top: window.innerHeight - 200,
-        behavior: 'smooth',
+        behavior: `smooth`,
       })
     }
   }
@@ -45,7 +45,7 @@ export class App extends Component {
       .then(resp => resp.json())
       .then(gallery => {
         if (gallery.hits.length === 0) {
-          return Promise.reject(new Error("поиск не дал результата"))
+          return Promise.reject(new Error("Пошук на дав результатів"))
         }
         this.handleResponse(gallery);
       })
@@ -83,7 +83,7 @@ export class App extends Component {
       return (
     <div>
           <Searchbar onSubmit={this.onSubmit} />
-          {err && <p className="error">Ошибка, {err.message}</p>}
+          {err && <p className="error">Помилочка, {err.message}</p>}
         {gallery.length !== 0 &&
           <ImageGallery
             gallery={gallery}

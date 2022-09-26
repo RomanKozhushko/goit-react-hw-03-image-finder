@@ -1,10 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types'
-import { ButtonStyle } from './Button.styled'
+import PropTypes from 'prop-types';
 
-export default function Button ({ loadMore }) {
+export default function Button({ loadMore }) {
     return (
-        <ButtonStyle type="button" onClick={loadMore}>Load more</ButtonStyle>
+        <button type="button" className="Button" onClick={loadMore}>Load more</button>
     )
 }
  

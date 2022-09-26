@@ -1,27 +1,26 @@
-import { FaBeer } from 'react-icons/fa';
-import { SearchbarStyle, SearchForm, SearchFormButton, SearchFormInput } from './Searchbar.styled';
+import { FaSearch } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 export default function Searchbar({ onSubmit }) {
 
     return (
-        <SearchbarStyle>
-        <SearchForm  onSubmit={onSubmit}>
-            <SearchFormButton type="submit" >
-                <FaBeer size={34}/>
-            </SearchFormButton>
+        <header className="Searchbar">
+        <form className="SearchForm" onSubmit={onSubmit}>
+            <button type="submit" className="SearchForm-button">
+                <FaSearch size={24}/>
+            </button>
 
-            <SearchFormInput
+            <input
+                className="SearchForm-input"
                 name="searchName"
                 type="text"
                 autoComplete="off"
                 autoFocus
                 placeholder="Search images and photos"
             />
-        </SearchForm >
-    </SearchbarStyle>)
+        </form>
+    </header>)
 }
-
 Searchbar.propTypes = {
     onSubmit: PropTypes.func
 }

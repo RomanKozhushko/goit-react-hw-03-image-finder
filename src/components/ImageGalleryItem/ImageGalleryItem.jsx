@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
-import { ImageGalleryItemStyle, ImageGalleryItemImage } from './ImageGalleryItem.styled';
 
 export default function ImageGalleryItem({ item, onClick }) { 
     return (
-        <ImageGalleryItemStyle onClick={() => onClick(item) }> 
-            <ImageGalleryItemImage src={item.webformatURL} alt="" />
-        </ImageGalleryItemStyle>
+        <li className="ImageGalleryItem" onClick={() => onClick(item) }> 
+            <img className="ImageGalleryItem-image" src={item.webformatURL} alt="" />
+        </li>
     )
 }
 
