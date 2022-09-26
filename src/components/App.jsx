@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import '../styles.css';
-import Searchbar from './Searchbar/Searchbar';
+import "./styles.css";
+import Searchbar from './SearchBar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
 import Loader from './Loader/Loader';
 import Modal from './Modal/Modal';
@@ -29,13 +29,13 @@ export class App extends Component {
       prevState.gallery.length < this.state.gallery.length) {
       window.scrollBy({
         top: window.innerHeight - 200,
-        behavior: `smooth`,
+        behavior: 'smooth',
       })
     }
   }
   doQuery() {
     const URL = "https://pixabay.com/api/";
-    const key = "29184640-266ee5361b73d654bedf55260";
+    const key = "25089539-92235f01f3468a6ac8c56a646";
     const { page, searchName } = this.state;
     this.setState({ isLoading: true });
     this.doFetch(URL, key, page, searchName);
@@ -45,7 +45,7 @@ export class App extends Component {
       .then(resp => resp.json())
       .then(gallery => {
         if (gallery.hits.length === 0) {
-          return Promise.reject(new Error("Пошук на дав результатів"))
+          return Promise.reject(new Error("поиск не дал результата"))
         }
         this.handleResponse(gallery);
       })
@@ -83,7 +83,7 @@ export class App extends Component {
       return (
     <div>
           <Searchbar onSubmit={this.onSubmit} />
-          {err && <p className="error">Помилочка, {err.message}</p>}
+          {err && <p className="error">Ошибка, {err.message}</p>}
         {gallery.length !== 0 &&
           <ImageGallery
             gallery={gallery}
