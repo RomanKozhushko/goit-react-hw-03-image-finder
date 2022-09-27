@@ -63,6 +63,7 @@ export class App extends Component {
       page: 1,
       gallery: [],
     });   
+    
    
   
   }
