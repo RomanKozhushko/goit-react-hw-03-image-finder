@@ -61,9 +61,12 @@ export class App extends Component {
     this.setState({
       searchName: evt.target.elements.searchName.value.trim().toLowerCase(),
       page: 1,
-      gallery: []
-    });
+      gallery: [],
+    });   
+   
+  
   }
+
   loadMore = () => {
 
     this.setState(prev => ({page: prev.page + 1}))

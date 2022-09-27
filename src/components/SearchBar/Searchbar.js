@@ -5,9 +5,11 @@ export default function Searchbar({ onSubmit }) {
 
     return (
         <header className="Searchbar">
-        <form className="SearchForm" onSubmit={onSubmit}>
+            <form className="SearchForm"
+                onSubmit={onSubmit}
+            >
             <button type="submit" className="SearchForm-button">
-                <FaSearch size={24}/>
+                <FaSearch size={30}/>
             </button>
 
             <input
