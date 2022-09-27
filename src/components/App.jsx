@@ -45,7 +45,7 @@ export class App extends Component {
       .then(resp => resp.json())
       .then(gallery => {
         if (gallery.hits.length === 0) {
-          return Promise.reject(new Error("поиск не дал результата"))
+          return Promise.reject(new Error("Пошук нажаль не дав рузультатів"))
         }
         this.handleResponse(gallery);
       })
@@ -86,7 +86,7 @@ export class App extends Component {
       return (
     <div>
           <Searchbar onSubmit={this.onSubmit} />
-          {err && <p className="error">Ошибка, {err.message}</p>}
+          {err && <p className="error">Помилка! {err.message}</p>}
         {gallery.length !== 0 &&
           <ImageGallery
             gallery={gallery}
