@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import ImageGaleryStyle from './ImageGalleryItem.module.css'
 import ImageGalleryItemImage from './ImageGalleryItem.module.css'
 
+
+
 export default function ImageGalleryItem({ item, onClick }) { 
     return (
         <li className={ImageGaleryStyle.ImageGalleryItem} onClick={() => onClick(item) }> 

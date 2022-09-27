@@ -22,7 +22,8 @@ export default class Modal extends Component {
                 <div className="Modal">
                     <img src={currentImg.largeImageURL} alt="largeImageURL" />
                 </div>
-            </div>, modalRoot
+            </div>,
+            modalRoot
         )
     }
 }
