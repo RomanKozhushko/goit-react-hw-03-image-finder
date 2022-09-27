@@ -35,7 +35,7 @@ export class App extends Component {
   }
   doQuery() {
     const URL = "https://pixabay.com/api/";
-    const key = "25089539-92235f01f3468a6ac8c56a646";
+    const key = "29184640-266ee5361b73d654bedf55260";
     const { page, searchName } = this.state;
     this.setState({ isLoading: true });
     this.doFetch(URL, key, page, searchName);
