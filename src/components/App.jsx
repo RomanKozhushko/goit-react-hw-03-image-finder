@@ -133,6 +133,4 @@ export class App extends Component {
         {isLoading && <Loader />}
         {gallery.length !== 0 &&
           <ImageGallery
-            gallery={gallery}
-            page={page}
-            
+    
