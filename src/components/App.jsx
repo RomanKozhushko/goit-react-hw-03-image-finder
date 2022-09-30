@@ -127,6 +127,3 @@ export class App extends Component {
 
 
 
-   return (
-      <div>
-        <Searchbar onSubmit={this.onSubmit} />
