@@ -137,9 +137,4 @@ export class App extends Component {
             page={page}
             totalItems={totalItems}
             loadMore={this.loadMore}
-            isLoading={isLoading}
-            showModal={this.toggleModal} />
-        }
-        {showModal && <Modal handleOverlayClick={this.handleOverlayClick} onEsc={this.handleEsc} currentImg={currentImg} />}
-
-}
+ 
