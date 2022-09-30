@@ -131,6 +131,4 @@ export class App extends Component {
       <div>
         <Searchbar onSubmit={this.onSubmit} />
         {isLoading && <Loader />}
-        {gallery.length !== 0 &&
-          <ImageGallery
     
