@@ -135,6 +135,4 @@ export class App extends Component {
           <ImageGallery
             gallery={gallery}
             page={page}
-            totalItems={totalItems}
-            loadMore={this.loadMore}
- 
+            
