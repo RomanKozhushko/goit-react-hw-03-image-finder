@@ -141,8 +141,5 @@ export class App extends Component {
             showModal={this.toggleModal} />
         }
         {showModal && <Modal handleOverlayClick={this.handleOverlayClick} onEsc={this.handleEsc} currentImg={currentImg} />}
-   
-      </div>
-    );
-  }
+
 }
