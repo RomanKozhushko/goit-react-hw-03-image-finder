@@ -6,7 +6,7 @@ import Loader from './Loader/Loader';
 import Modal from './Modal/Modal';
 
 
-
+// Оголошуємо необхідні СТЕЙТИ!!!
 export class App extends Component {
   static PERPAGE = 12;
   state = {
@@ -20,6 +20,7 @@ export class App extends Component {
     error: null,
   }
       
+  
   componentDidUpdate(_, prevState) {
     const { page, searchName } = this.state
     if (prevState.page !== page || prevState.searchName !== searchName) {
@@ -105,6 +106,28 @@ export class App extends Component {
     }
     
     return (
+      <div>
+        <Searchbar onSubmit={this.onSubmit} />
+        {isLoading && <Loader />}
+        {gallery.length !== 0 &&
+          <ImageGallery
+            gallery={gallery}
+            page={page}
+            totalItems={totalItems}
+            loadMore={this.loadMore}
+            isLoading={isLoading}
+            showModal={this.toggleModal} />
+        }
+        {showModal && <Modal handleOverlayClick={this.handleOverlayClick} onEsc={this.handleEsc} currentImg={currentImg} />}
+   
+      </div>
+    );
+  }
+}
+
+
+
+   return (
       <div>
         <Searchbar onSubmit={this.onSubmit} />
         {isLoading && <Loader />}
